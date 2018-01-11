@@ -142,36 +142,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classproio_1_1BucketOutputStream.html">BucketOutputStream</a> *bucket;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    google::protobuf::io::FileOutputStream *fileStream;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    uint64_t bucketEvents;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Compression compression;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="classproio_1_1BucketOutputStream.html">BucketOutputStream</a> *compBucket;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">const</span> uint64_t bucketDumpSize = 0x1000000;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">const</span> uint8_t magicBytes[] = {0xe1, 0xc1, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                              0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classproio_1_1SerializationError.html">   82</a></span>&#160;<span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="classproio_1_1SerializationError.html">SerializationError</a> : <span class="keyword">public</span> std::exception {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *what() <span class="keyword">const</span> <span class="keywordflow">throw</span>() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;Failed to serialize message&quot;</span>; }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;} serializationError;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classproio_1_1FileCreationError.html">   86</a></span>&#160;<span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="classproio_1_1FileCreationError.html">FileCreationError</a> : <span class="keyword">public</span> std::exception {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *what() <span class="keyword">const</span> <span class="keywordflow">throw</span>() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;Failed to creating file for writing&quot;</span>; }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;} fileCreationError;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}  <span class="comment">// namespace proio</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif  // PROIO_WRITER_H</span></div>
-<div class="ttc" id="classproio_1_1Writer_html_a606d2b2b8c74e9117650d2c4189d15e6"><div class="ttname"><a href="classproio_1_1Writer.html#a606d2b2b8c74e9117650d2c4189d15e6">proio::Writer::Writer</a></div><div class="ttdeci">Writer(int fd)</div><div class="ttdef"><b>Definition:</b> writer.cc:11</div></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    uint64_t bucketEvents;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    Compression compression;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="classproio_1_1BucketOutputStream.html">BucketOutputStream</a> *compBucket;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">const</span> uint64_t bucketDumpSize = 0x1000000;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">const</span> uint8_t magicBytes[] = {0xe1, 0xc1, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                              0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classproio_1_1SerializationError.html">   81</a></span>&#160;<span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="classproio_1_1SerializationError.html">SerializationError</a> : <span class="keyword">public</span> std::exception {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *what() <span class="keyword">const</span> <span class="keywordflow">throw</span>() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;Failed to serialize message&quot;</span>; }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;} serializationError;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classproio_1_1FileCreationError.html">   85</a></span>&#160;<span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="classproio_1_1FileCreationError.html">FileCreationError</a> : <span class="keyword">public</span> std::exception {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *what() <span class="keyword">const</span> <span class="keywordflow">throw</span>() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;Failed to creating file for writing&quot;</span>; }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;} fileCreationError;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classproio_1_1LZ4FrameCreationError.html">   89</a></span>&#160;<span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="classproio_1_1LZ4FrameCreationError.html">LZ4FrameCreationError</a> : <span class="keyword">public</span> std::exception {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *what() <span class="keyword">const</span> <span class="keywordflow">throw</span>() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;Failed to create LZ4 frame&quot;</span>; }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;} lz4FrameCreationError;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}  <span class="comment">// namespace proio</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif  // PROIO_WRITER_H</span></div>
+<div class="ttc" id="classproio_1_1Writer_html_a606d2b2b8c74e9117650d2c4189d15e6"><div class="ttname"><a href="classproio_1_1Writer.html#a606d2b2b8c74e9117650d2c4189d15e6">proio::Writer::Writer</a></div><div class="ttdeci">Writer(int fd)</div><div class="ttdef"><b>Definition:</b> writer.cc:12</div></div>
 <div class="ttc" id="classproio_1_1Writer_html"><div class="ttname"><a href="classproio_1_1Writer.html">proio::Writer</a></div><div class="ttdef"><b>Definition:</b> writer.h:43</div></div>
 <div class="ttc" id="classproio_1_1BucketOutputStream_html"><div class="ttname"><a href="classproio_1_1BucketOutputStream.html">proio::BucketOutputStream</a></div><div class="ttdef"><b>Definition:</b> writer.h:20</div></div>
-<div class="ttc" id="classproio_1_1FileCreationError_html"><div class="ttname"><a href="classproio_1_1FileCreationError.html">proio::FileCreationError</a></div><div class="ttdef"><b>Definition:</b> writer.h:86</div></div>
-<div class="ttc" id="classproio_1_1Writer_html_aa66ca9fb97a5439b7d97c1a116da4090"><div class="ttname"><a href="classproio_1_1Writer.html#aa66ca9fb97a5439b7d97c1a116da4090">proio::Writer::Flush</a></div><div class="ttdeci">void Flush()</div><div class="ttdef"><b>Definition:</b> writer.cc:35</div></div>
+<div class="ttc" id="classproio_1_1FileCreationError_html"><div class="ttname"><a href="classproio_1_1FileCreationError.html">proio::FileCreationError</a></div><div class="ttdef"><b>Definition:</b> writer.h:85</div></div>
+<div class="ttc" id="classproio_1_1Writer_html_aa66ca9fb97a5439b7d97c1a116da4090"><div class="ttname"><a href="classproio_1_1Writer.html#aa66ca9fb97a5439b7d97c1a116da4090">proio::Writer::Flush</a></div><div class="ttdeci">void Flush()</div><div class="ttdef"><b>Definition:</b> writer.cc:36</div></div>
+<div class="ttc" id="classproio_1_1LZ4FrameCreationError_html"><div class="ttname"><a href="classproio_1_1LZ4FrameCreationError.html">proio::LZ4FrameCreationError</a></div><div class="ttdef"><b>Definition:</b> writer.h:89</div></div>
 <div class="ttc" id="classproio_1_1Event_html"><div class="ttname"><a href="classproio_1_1Event.html">proio::Event</a></div><div class="ttdef"><b>Definition:</b> event.h:11</div></div>
-<div class="ttc" id="classproio_1_1Writer_html_ada1aebeffc3689550bdfcf8a8c26417c"><div class="ttname"><a href="classproio_1_1Writer.html#ada1aebeffc3689550bdfcf8a8c26417c">proio::Writer::Push</a></div><div class="ttdeci">void Push(Event *event)</div><div class="ttdef"><b>Definition:</b> writer.cc:82</div></div>
-<div class="ttc" id="classproio_1_1Writer_html_a039de7907698bc83082294abb43382c1"><div class="ttname"><a href="classproio_1_1Writer.html#a039de7907698bc83082294abb43382c1">proio::Writer::SetCompression</a></div><div class="ttdeci">void SetCompression(Compression comp)</div><div class="ttdef"><b>Definition:</b> writer.cc:101</div></div>
-<div class="ttc" id="classproio_1_1SerializationError_html"><div class="ttname"><a href="classproio_1_1SerializationError.html">proio::SerializationError</a></div><div class="ttdef"><b>Definition:</b> writer.h:82</div></div>
+<div class="ttc" id="classproio_1_1Writer_html_ada1aebeffc3689550bdfcf8a8c26417c"><div class="ttname"><a href="classproio_1_1Writer.html#ada1aebeffc3689550bdfcf8a8c26417c">proio::Writer::Push</a></div><div class="ttdeci">void Push(Event *event)</div><div class="ttdef"><b>Definition:</b> writer.cc:87</div></div>
+<div class="ttc" id="classproio_1_1Writer_html_a039de7907698bc83082294abb43382c1"><div class="ttname"><a href="classproio_1_1Writer.html#a039de7907698bc83082294abb43382c1">proio::Writer::SetCompression</a></div><div class="ttdeci">void SetCompression(Compression comp)</div><div class="ttdef"><b>Definition:</b> writer.cc:105</div></div>
+<div class="ttc" id="classproio_1_1SerializationError_html"><div class="ttname"><a href="classproio_1_1SerializationError.html">proio::SerializationError</a></div><div class="ttdef"><b>Definition:</b> writer.h:81</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

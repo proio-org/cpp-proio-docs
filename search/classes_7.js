@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['unknownmessagetypeerror',['UnknownMessageTypeError',['../classproio_1_1UnknownMessageTypeError.html',1,'proio']]]
+  ['seekerror',['SeekError',['../classproio_1_1SeekError.html',1,'proio']]],
+  ['serializationerror',['SerializationError',['../classproio_1_1SerializationError.html',1,'proio']]]
 ];
