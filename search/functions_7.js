@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['tagentry',['TagEntry',['../classproio_1_1Event.html#a05c1561e4d6d5f8f09c29673dbf4f562',1,'proio::Event']]],
-  ['taggedentries',['TaggedEntries',['../classproio_1_1Event.html#a0ace44e845b1265091bb6acb088db37f',1,'proio::Event']]],
-  ['tags',['Tags',['../classproio_1_1Event.html#aa821f55427caa3dc7dc5c750b662001a',1,'proio::Event']]]
+  ['reader',['Reader',['../classproio_1_1Reader.html#a8826662f9b377ea0d2959f623db363f5',1,'proio::Reader::Reader(int fd)'],['../classproio_1_1Reader.html#ae1ecb4f76f8ea6348ecff9dcc1bfe0cc',1,'proio::Reader::Reader(std::string filename)']]],
+  ['removeentry',['RemoveEntry',['../classproio_1_1Event.html#add17fcdfd3c2cb838a61a5d6bd0cf081',1,'proio::Event']]]
 ];

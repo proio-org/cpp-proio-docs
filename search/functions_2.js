@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getentry',['GetEntry',['../classproio_1_1Event.html#ad125f2420c84137d28b3588eccca3f51',1,'proio::Event']]]
+  ['entrytags',['EntryTags',['../classproio_1_1Event.html#ab5abcb3172a9610ab9d61d0428018469',1,'proio::Event']]]
 ];

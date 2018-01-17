@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['next',['Next',['../classproio_1_1Reader.html#a58fd1c643a425e0c49fe301089c777dc',1,'proio::Reader']]]
+  ['flush',['Flush',['../classproio_1_1Writer.html#aa66ca9fb97a5439b7d97c1a116da4090',1,'proio::Writer']]]
 ];

@@ -104,6 +104,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae1ecb4f76f8ea6348ecff9dcc1bfe0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58fd1c643a425e0c49fe301089c777dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classproio_1_1Event.html">Event</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Reader.html#a58fd1c643a425e0c49fe301089c777dc">Next</a> ()</td></tr>
 <tr class="separator:a58fd1c643a425e0c49fe301089c777dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a26412fd8d17012c83bd6fbd453f9fb"><td class="memItemLeft" align="right" valign="top">proto::BucketHeader *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Reader.html#a4a26412fd8d17012c83bd6fbd453f9fb">NextHeader</a> ()</td></tr>
+<tr class="separator:a4a26412fd8d17012c83bd6fbd453f9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd1326802327d7f4241188c4eb8a7b4f"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Reader.html#afd1326802327d7f4241188c4eb8a7b4f">Skip</a> (uint64_t nEvents)</td></tr>
 <tr class="separator:afd1326802327d7f4241188c4eb8a7b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a841aff8caf5ca4436555daad3b24a57b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Reader.html#a841aff8caf5ca4436555daad3b24a57b">SeekToStart</a> ()</td></tr>
@@ -160,6 +162,22 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Next returns the next available <a class="el" href="classproio_1_1Event.html">Event</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4a26412fd8d17012c83bd6fbd453f9fb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">proto::BucketHeader * Reader::NextHeader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>NextHeader returns the next bucket header. This is useful for scanning a stream. The corresponding bucket is discarded. </p>
 
 </div>
 </div>

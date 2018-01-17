@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['reader',['Reader',['../classproio_1_1Reader.html#a8826662f9b377ea0d2959f623db363f5',1,'proio::Reader::Reader(int fd)'],['../classproio_1_1Reader.html#ae1ecb4f76f8ea6348ecff9dcc1bfe0cc',1,'proio::Reader::Reader(std::string filename)']]]
+  ['next',['Next',['../classproio_1_1Reader.html#a58fd1c643a425e0c49fe301089c777dc',1,'proio::Reader']]],
+  ['nextheader',['NextHeader',['../classproio_1_1Reader.html#a4a26412fd8d17012c83bd6fbd453f9fb',1,'proio::Reader']]]
 ];

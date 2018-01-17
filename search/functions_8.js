@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['writer',['Writer',['../classproio_1_1Writer.html#a606d2b2b8c74e9117650d2c4189d15e6',1,'proio::Writer::Writer(int fd)'],['../classproio_1_1Writer.html#a3c163f144fbb4f8d3122d0204983aab4',1,'proio::Writer::Writer(std::string filename)']]]
+  ['seektostart',['SeekToStart',['../classproio_1_1Reader.html#a841aff8caf5ca4436555daad3b24a57b',1,'proio::Reader']]],
+  ['setcompression',['SetCompression',['../classproio_1_1Writer.html#a039de7907698bc83082294abb43382c1',1,'proio::Writer']]],
+  ['skip',['Skip',['../classproio_1_1Reader.html#afd1326802327d7f4241188c4eb8a7b4f',1,'proio::Reader']]],
+  ['string',['String',['../classproio_1_1Event.html#a5f105a5b3daddc3a893a44b8de445819',1,'proio::Event']]]
 ];
