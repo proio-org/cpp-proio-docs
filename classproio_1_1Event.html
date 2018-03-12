@@ -132,6 +132,8 @@ proto::Event *&#160;</td><td class="memItemRight" valign="bottom"><b>getProto</b
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class representing a single event </p>
+
+<p>Definition at line <a class="el" href="event_8h_source.html#l00011">11</a> of file <a class="el" href="event_8h_source.html">event.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a5af4a67915f2fe8aac76d3c20d3278bd"></a>
 <div class="memitem">
@@ -158,6 +160,8 @@ proto::Event *&#160;</td><td class="memItemRight" valign="bottom"><b>getProto</b
 </div><div class="memdoc">
 <p>AddEntry takes a tag and protobuf message entry and adds it to the <a class="el" href="classproio_1_1Event.html">Event</a>. The return value is a uint64_t ID number used to reference the added entry. Once the entry is added, it is owned by the <a class="el" href="classproio_1_1Event.html">Event</a> object. </p>
 
+<p>Definition at line <a class="el" href="event_8cc_source.html#l00027">27</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a2a288aeb0ba97cf2edf49afb4b199d12"></a>
@@ -173,6 +177,8 @@ proto::Event *&#160;</td><td class="memItemRight" valign="bottom"><b>getProto</b
       </table>
 </div><div class="memdoc">
 <p>AllEntries returns IDs for all entries in the event. </p>
+
+<p>Definition at line <a class="el" href="event_8cc_source.html#l00104">104</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
 
 </div>
 </div>
@@ -191,6 +197,8 @@ proto::Event *&#160;</td><td class="memItemRight" valign="bottom"><b>getProto</b
 </div><div class="memdoc">
 <p>DeleteTag removes a tag from the <a class="el" href="classproio_1_1Event.html">Event</a>. </p>
 
+<p>Definition at line <a class="el" href="event_8cc_source.html#l00124">124</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ab5abcb3172a9610ab9d61d0428018469"></a>
@@ -207,6 +215,8 @@ proto::Event *&#160;</td><td class="memItemRight" valign="bottom"><b>getProto</b
       </table>
 </div><div class="memdoc">
 <p>EntryTags performs a reverse lookup of tags that point to an entry. This is a relatively expensive search. </p>
+
+<p>Definition at line <a class="el" href="event_8cc_source.html#l00111">111</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
 
 </div>
 </div>
@@ -225,6 +235,8 @@ proto::Event *&#160;</td><td class="memItemRight" valign="bottom"><b>getProto</b
 </div><div class="memdoc">
 <p>GetEntry takes an entry ID and returns the corresponding entry. The returned entries are still owned by the <a class="el" href="classproio_1_1Event.html">Event</a> object. </p>
 
+<p>Definition at line <a class="el" href="event_8cc_source.html#l00043">43</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="add17fcdfd3c2cb838a61a5d6bd0cf081"></a>
@@ -242,6 +254,8 @@ proto::Event *&#160;</td><td class="memItemRight" valign="bottom"><b>getProto</b
 </div><div class="memdoc">
 <p>RemoveEntry removes an entry from the event. </p>
 
+<p>Definition at line <a class="el" href="event_8cc_source.html#l00075">75</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a5f105a5b3daddc3a893a44b8de445819"></a>
@@ -257,6 +271,8 @@ proto::Event *&#160;</td><td class="memItemRight" valign="bottom"><b>getProto</b
       </table>
 </div><div class="memdoc">
 <p>String returns a human-readable string representing the event. </p>
+
+<p>Definition at line <a class="el" href="event_8cc_source.html#l00126">126</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
 
 </div>
 </div>
@@ -285,6 +301,8 @@ proto::Event *&#160;</td><td class="memItemRight" valign="bottom"><b>getProto</b
 </div><div class="memdoc">
 <p>TagEntry adds a tag to an entry that has already been added, identified by its ID. </p>
 
+<p>Definition at line <a class="el" href="event_8cc_source.html#l00061">61</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a0ace44e845b1265091bb6acb088db37f"></a>
@@ -302,6 +320,8 @@ proto::Event *&#160;</td><td class="memItemRight" valign="bottom"><b>getProto</b
 </div><div class="memdoc">
 <p>TaggedEntries tages a tag string and returns a list of entry IDs that the tag references. </p>
 
+<p>Definition at line <a class="el" href="event_8cc_source.html#l00093">93</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aa821f55427caa3dc7dc5c750b662001a"></a>
@@ -317,6 +337,8 @@ proto::Event *&#160;</td><td class="memItemRight" valign="bottom"><b>getProto</b
       </table>
 </div><div class="memdoc">
 <p>Tags returns a list of tags that exist in the event. </p>
+
+<p>Definition at line <a class="el" href="event_8cc_source.html#l00084">84</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
 
 </div>
 </div>
@@ -345,11 +367,13 @@ proto::Event *&#160;</td><td class="memItemRight" valign="bottom"><b>getProto</b
 </div><div class="memdoc">
 <p>UntagEntry removes a tag from a specified entry. </p>
 
+<p>Definition at line <a class="el" href="event_8cc_source.html#l00063">63</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/decibelcooper/proio/cpp-proio/src/<a class="el" href="event_8h_source.html">event.h</a></li>
-<li>/home/travis/build/decibelcooper/proio/cpp-proio/src/event.cc</li>
+<li>/home/travis/build/decibelcooper/proio/cpp-proio/src/<a class="el" href="event_8cc_source.html">event.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
