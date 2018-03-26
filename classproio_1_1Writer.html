@@ -87,7 +87,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classproio_1_1Writer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">proio::Writer Class Reference</div>  </div>
@@ -96,6 +98,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><code>#include &lt;<a class="el" href="writer_8h_source.html">writer.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structproio_1_1Writer_1_1WriteJob.html">WriteJob</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a606d2b2b8c74e9117650d2c4189d15e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Writer.html#a606d2b2b8c74e9117650d2c4189d15e6">Writer</a> (int fd)</td></tr>
@@ -108,11 +115,29 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ada1aebeffc3689550bdfcf8a8c26417c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a039de7907698bc83082294abb43382c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Writer.html#a039de7907698bc83082294abb43382c1">SetCompression</a> (Compression comp)</td></tr>
 <tr class="separator:a039de7907698bc83082294abb43382c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a84c0558d864542974e06046db59feb0b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84c0558d864542974e06046db59feb0b"></a>
+pthread_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><b>streamWriteJobMutex</b></td></tr>
+<tr class="separator:a84c0558d864542974e06046db59feb0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab344a9471b9fdab5fe2ab370339fe50a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab344a9471b9fdab5fe2ab370339fe50a"></a>
+pthread_cond_t&#160;</td><td class="memItemRight" valign="bottom"><b>streamWriteJobCond</b></td></tr>
+<tr class="separator:ab344a9471b9fdab5fe2ab370339fe50a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af000c078332fe4c5d6e1fb084b5a97dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af000c078332fe4c5d6e1fb084b5a97dc"></a>
+pthread_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><b>streamWriteReadyMutex</b></td></tr>
+<tr class="separator:af000c078332fe4c5d6e1fb084b5a97dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae57d34fc5811c9e2b88358c9b03f4e2a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae57d34fc5811c9e2b88358c9b03f4e2a"></a>
+pthread_cond_t&#160;</td><td class="memItemRight" valign="bottom"><b>streamWriteReadyCond</b></td></tr>
+<tr class="separator:ae57d34fc5811c9e2b88358c9b03f4e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e55110b579d25c19dec8a6bdb4f5953"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e55110b579d25c19dec8a6bdb4f5953"></a>
+<a class="el" href="structproio_1_1Writer_1_1WriteJob.html">WriteJob</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>streamWriteJob</b></td></tr>
+<tr class="separator:a8e55110b579d25c19dec8a6bdb4f5953"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classproio_1_1Writer.html">Writer</a> for proio files </p>
 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00043">43</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
+<p>Definition at line <a class="el" href="writer_8h_source.html#l00044">44</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a606d2b2b8c74e9117650d2c4189d15e6"></a>
 <div class="memitem">
@@ -167,7 +192,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Flush flushes all buffered data to the output stream. This is automatically called upon destruction of the <a class="el" href="classproio_1_1Writer.html">Writer</a> object. </p>
 
-<p>Definition at line <a class="el" href="writer_8cc_source.html#l00036">36</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
+<p>Definition at line <a class="el" href="writer_8cc_source.html#l00049">49</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
 
 </div>
 </div>
@@ -186,7 +211,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Push takes an <a class="el" href="classproio_1_1Event.html">Event</a> and serializes it into the output bucket. </p>
 
-<p>Definition at line <a class="el" href="writer_8cc_source.html#l00087">87</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
+<p>Definition at line <a class="el" href="writer_8cc_source.html#l00097">97</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
 
 </div>
 </div>
@@ -205,7 +230,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>SetCompression sets the compression type to use for future output buckets. </p>
 
-<p>Definition at line <a class="el" href="writer_8cc_source.html#l00105">105</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
+<p>Definition at line <a class="el" href="writer_8cc_source.html#l00115">115</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
 
 </div>
 </div>
