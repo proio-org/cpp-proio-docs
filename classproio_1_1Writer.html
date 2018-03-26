@@ -89,7 +89,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classproio_1_1Writer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">proio::Writer Class Reference</div>  </div>
@@ -98,11 +97,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><code>#include &lt;<a class="el" href="writer_8h_source.html">writer.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structproio_1_1Writer_1_1WriteJob.html">WriteJob</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a606d2b2b8c74e9117650d2c4189d15e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Writer.html#a606d2b2b8c74e9117650d2c4189d15e6">Writer</a> (int fd)</td></tr>
@@ -113,26 +107,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa66ca9fb97a5439b7d97c1a116da4090"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada1aebeffc3689550bdfcf8a8c26417c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Writer.html#ada1aebeffc3689550bdfcf8a8c26417c">Push</a> (<a class="el" href="classproio_1_1Event.html">Event</a> *event)</td></tr>
 <tr class="separator:ada1aebeffc3689550bdfcf8a8c26417c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a039de7907698bc83082294abb43382c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Writer.html#a039de7907698bc83082294abb43382c1">SetCompression</a> (Compression comp)</td></tr>
-<tr class="separator:a039de7907698bc83082294abb43382c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a84c0558d864542974e06046db59feb0b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84c0558d864542974e06046db59feb0b"></a>
-pthread_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><b>streamWriteJobMutex</b></td></tr>
-<tr class="separator:a84c0558d864542974e06046db59feb0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab344a9471b9fdab5fe2ab370339fe50a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab344a9471b9fdab5fe2ab370339fe50a"></a>
-pthread_cond_t&#160;</td><td class="memItemRight" valign="bottom"><b>streamWriteJobCond</b></td></tr>
-<tr class="separator:ab344a9471b9fdab5fe2ab370339fe50a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af000c078332fe4c5d6e1fb084b5a97dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af000c078332fe4c5d6e1fb084b5a97dc"></a>
-pthread_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><b>streamWriteReadyMutex</b></td></tr>
-<tr class="separator:af000c078332fe4c5d6e1fb084b5a97dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae57d34fc5811c9e2b88358c9b03f4e2a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae57d34fc5811c9e2b88358c9b03f4e2a"></a>
-pthread_cond_t&#160;</td><td class="memItemRight" valign="bottom"><b>streamWriteReadyCond</b></td></tr>
-<tr class="separator:ae57d34fc5811c9e2b88358c9b03f4e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e55110b579d25c19dec8a6bdb4f5953"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e55110b579d25c19dec8a6bdb4f5953"></a>
-<a class="el" href="structproio_1_1Writer_1_1WriteJob.html">WriteJob</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>streamWriteJob</b></td></tr>
-<tr class="separator:a8e55110b579d25c19dec8a6bdb4f5953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5bdb7597143651776fe8616763075d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Writer.html#ae5bdb7597143651776fe8616763075d6">SetCompression</a> (Compression comp=LZ4)</td></tr>
+<tr class="separator:ae5bdb7597143651776fe8616763075d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e0b8b3811dc0ec6ea68c7d4c964d9b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Writer.html#a1e0b8b3811dc0ec6ea68c7d4c964d9b6">SetBucketDumpThreshold</a> (uint64_t thres=0x1000000)</td></tr>
+<tr class="separator:a1e0b8b3811dc0ec6ea68c7d4c964d9b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classproio_1_1Writer.html">Writer</a> for proio files </p>
@@ -190,7 +168,7 @@ pthread_cond_t&#160;</td><td class="memItemRight" valign="bottom"><b>streamWrite
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Flush flushes all buffered data to the output stream. This is automatically called upon destruction of the <a class="el" href="classproio_1_1Writer.html">Writer</a> object. </p>
+<p>Flush compresses and flushes all buffered (bucket) data to the output stream. This is automatically called upon destruction of the <a class="el" href="classproio_1_1Writer.html">Writer</a> object, and when the bucket dump threshold is reached. This function is asynchronous, meaning that it will return before the flush to the output stream is actually complete. Synchronization is forced on destruction. </p>
 
 <p>Definition at line <a class="el" href="writer_8cc_source.html#l00049">49</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
 
@@ -211,26 +189,61 @@ pthread_cond_t&#160;</td><td class="memItemRight" valign="bottom"><b>streamWrite
 </div><div class="memdoc">
 <p>Push takes an <a class="el" href="classproio_1_1Event.html">Event</a> and serializes it into the output bucket. </p>
 
-<p>Definition at line <a class="el" href="writer_8cc_source.html#l00097">97</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
+<p>Definition at line <a class="el" href="writer_8cc_source.html#l00096">96</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a039de7907698bc83082294abb43382c1"></a>
+<a class="anchor" id="a1e0b8b3811dc0ec6ea68c7d4c964d9b6"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Writer::SetCompression </td>
+          <td class="memname">void proio::Writer::SetBucketDumpThreshold </td>
           <td>(</td>
-          <td class="paramtype">Compression&#160;</td>
-          <td class="paramname"><em>comp</em></td><td>)</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>thres</em> = <code>0x1000000</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>SetCompression sets the compression type to use for future output buckets. </p>
+<p>SetBucketDumpThreshold sets the threshold uncompressed bucket size for automatic compression and output (dump). I.e., once the size of the uncompressed bucket in memory reaches this threshold, <a class="el" href="classproio_1_1Writer.html#aa66ca9fb97a5439b7d97c1a116da4090">Flush()</a> will be called. <a class="el" href="classproio_1_1Writer.html#aa66ca9fb97a5439b7d97c1a116da4090">Flush()</a> can also be manually called at any time. </p>
 
-<p>Definition at line <a class="el" href="writer_8cc_source.html#l00115">115</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
+<p>Definition at line <a class="el" href="writer_8h_source.html#l00074">74</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae5bdb7597143651776fe8616763075d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void proio::Writer::SetCompression </td>
+          <td>(</td>
+          <td class="paramtype">Compression&#160;</td>
+          <td class="paramname"><em>comp</em> = <code>LZ4</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>SetCompression sets the compression type to use for future output buckets. One of: LZ4, GZIP, or UNCOMPRESSED. </p>
+
+<p>Definition at line <a class="el" href="writer_8h_source.html#l00068">68</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
 
 </div>
 </div>
