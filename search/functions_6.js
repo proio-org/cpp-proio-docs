@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['push',['Push',['../classproio_1_1Writer.html#ada1aebeffc3689550bdfcf8a8c26417c',1,'proio::Writer']]]
+  ['next',['Next',['../classproio_1_1Reader.html#a58fd1c643a425e0c49fe301089c777dc',1,'proio::Reader']]],
+  ['nextheader',['NextHeader',['../classproio_1_1Reader.html#a4a26412fd8d17012c83bd6fbd453f9fb',1,'proio::Reader']]]
 ];

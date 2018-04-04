@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classproio_1_1Event-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">proio::Event Class Reference</div>  </div>
@@ -121,14 +122,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab5abcb3172a9610ab9d61d0428018469"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4abc130312b7122525381feb4382168a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Event.html#a4abc130312b7122525381feb4382168a">DeleteTag</a> (std::string tag)</td></tr>
 <tr class="separator:a4abc130312b7122525381feb4382168a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27ce4dff76da3e3c0f773eb19b8e23fc"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, <br class="typebreak"/>
+std::shared_ptr&lt; std::string &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Event.html#a27ce4dff76da3e3c0f773eb19b8e23fc">Metadata</a> ()</td></tr>
+<tr class="separator:a27ce4dff76da3e3c0f773eb19b8e23fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f105a5b3daddc3a893a44b8de445819"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Event.html#a5f105a5b3daddc3a893a44b8de445819">String</a> ()</td></tr>
 <tr class="separator:a5f105a5b3daddc3a893a44b8de445819"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20672c8edac69483c2ee54db60c71a4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20672c8edac69483c2ee54db60c71a4a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>flushCache</b> ()</td></tr>
-<tr class="separator:a20672c8edac69483c2ee54db60c71a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01fd376635fcd5ee64547ee9e00a83d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01fd376635fcd5ee64547ee9e00a83d3"></a>
-proto::Event *&#160;</td><td class="memItemRight" valign="bottom"><b>getProto</b> ()</td></tr>
-<tr class="separator:a01fd376635fcd5ee64547ee9e00a83d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:ab699d593c3b9dee1ed8d700a93d70700"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab699d593c3b9dee1ed8d700a93d70700"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>Writer</b></td></tr>
+<tr class="separator:ab699d593c3b9dee1ed8d700a93d70700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35cb182752752c74a30050705acc3c06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35cb182752752c74a30050705acc3c06"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>Reader</b></td></tr>
+<tr class="separator:a35cb182752752c74a30050705acc3c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class representing a single event </p>
@@ -236,6 +243,32 @@ proto::Event *&#160;</td><td class="memItemRight" valign="bottom"><b>getProto</b
 <p>GetEntry takes an entry ID and returns the corresponding entry. The returned entries are still owned by the <a class="el" href="classproio_1_1Event.html">Event</a> object. </p>
 
 <p>Definition at line <a class="el" href="event_8cc_source.html#l00043">43</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a27ce4dff76da3e3c0f773eb19b8e23fc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt;std::string, std::shared_ptr&lt;std::string&gt; &gt;&amp; proio::Event::Metadata </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Metadata returns a mapping from a string key to a pointer to a string that contains the metadata, by reference. These metadata are all the entries received on the stream up to this <a class="el" href="classproio_1_1Event.html">Event</a>. </p>
+
+<p>Definition at line <a class="el" href="event_8h_source.html#l00056">56</a> of file <a class="el" href="event_8h_source.html">event.h</a>.</p>
 
 </div>
 </div>

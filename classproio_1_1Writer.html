@@ -107,6 +107,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa66ca9fb97a5439b7d97c1a116da4090"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada1aebeffc3689550bdfcf8a8c26417c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Writer.html#ada1aebeffc3689550bdfcf8a8c26417c">Push</a> (<a class="el" href="classproio_1_1Event.html">Event</a> *event)</td></tr>
 <tr class="separator:ada1aebeffc3689550bdfcf8a8c26417c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03f9c21cf2d745f98a3047c1c0e00c5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Writer.html#a03f9c21cf2d745f98a3047c1c0e00c5f">PushMetadata</a> (std::string name, std::string &amp;data)</td></tr>
+<tr class="separator:a03f9c21cf2d745f98a3047c1c0e00c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f94db91bd25ac275c527eb7b921a30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Writer.html#ae6f94db91bd25ac275c527eb7b921a30">PushMetadata</a> (std::string name, const char *data)</td></tr>
+<tr class="separator:ae6f94db91bd25ac275c527eb7b921a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5bdb7597143651776fe8616763075d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Writer.html#ae5bdb7597143651776fe8616763075d6">SetCompression</a> (Compression comp=LZ4)</td></tr>
 <tr class="separator:ae5bdb7597143651776fe8616763075d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e0b8b3811dc0ec6ea68c7d4c964d9b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Writer.html#a1e0b8b3811dc0ec6ea68c7d4c964d9b6">SetBucketDumpThreshold</a> (uint64_t thres=0x1000000)</td></tr>
@@ -193,6 +197,64 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a03f9c21cf2d745f98a3047c1c0e00c5f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Writer::PushMetadata </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>PushMetadata takes a string key and string data set and pushes it into the stream. If Events exist in the current bucket, the bucket is flushed first. </p>
+
+<p>Definition at line <a class="el" href="writer_8cc_source.html#l00120">120</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae6f94db91bd25ac275c527eb7b921a30"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Writer::PushMetadata </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>PushMetadata takes a string key and null-terminated const char array by pointer and pushes it into the stream. If Events exist in the current bucket, the bucket is flushed first. </p>
+
+<p>Definition at line <a class="el" href="writer_8cc_source.html#l00125">125</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a1e0b8b3811dc0ec6ea68c7d4c964d9b6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -216,7 +278,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>SetBucketDumpThreshold sets the threshold uncompressed bucket size for automatic compression and output (dump). I.e., once the size of the uncompressed bucket in memory reaches this threshold, <a class="el" href="classproio_1_1Writer.html#aa66ca9fb97a5439b7d97c1a116da4090">Flush()</a> will be called. <a class="el" href="classproio_1_1Writer.html#aa66ca9fb97a5439b7d97c1a116da4090">Flush()</a> can also be manually called at any time. </p>
 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00074">74</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
+<p>Definition at line <a class="el" href="writer_8h_source.html#l00084">84</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
 
 </div>
 </div>
@@ -243,7 +305,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>SetCompression sets the compression type to use for future output buckets. One of: LZ4, GZIP, or UNCOMPRESSED. </p>
 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00068">68</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
+<p>Definition at line <a class="el" href="writer_8h_source.html#l00078">78</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
 
 </div>
 </div>
