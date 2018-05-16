@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getentry',['GetEntry',['../classproio_1_1Event.html#ad125f2420c84137d28b3588eccca3f51',1,'proio::Event']]]
+  ['flush',['Flush',['../classproio_1_1Writer.html#aa66ca9fb97a5439b7d97c1a116da4090',1,'proio::Writer']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['metadata',['Metadata',['../classproio_1_1Event.html#a27ce4dff76da3e3c0f773eb19b8e23fc',1,'proio::Event']]]
+  ['getentry',['GetEntry',['../classproio_1_1Event.html#ad125f2420c84137d28b3588eccca3f51',1,'proio::Event']]]
 ];

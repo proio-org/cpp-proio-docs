@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['deletetag',['DeleteTag',['../classproio_1_1Event.html#a4abc130312b7122525381feb4382168a',1,'proio::Event']]]
+  ['clear',['Clear',['../classproio_1_1Event.html#ae39cdc53bffb0741bfda9c5634b7018b',1,'proio::Event']]]
 ];

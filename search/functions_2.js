@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['entrytags',['EntryTags',['../classproio_1_1Event.html#ab5abcb3172a9610ab9d61d0428018469',1,'proio::Event']]]
+  ['deletetag',['DeleteTag',['../classproio_1_1Event.html#a4abc130312b7122525381feb4382168a',1,'proio::Event']]]
 ];

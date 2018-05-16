@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['flush',['Flush',['../classproio_1_1Writer.html#aa66ca9fb97a5439b7d97c1a116da4090',1,'proio::Writer']]]
+  ['entrytags',['EntryTags',['../classproio_1_1Event.html#ab5abcb3172a9610ab9d61d0428018469',1,'proio::Event']]]
 ];
