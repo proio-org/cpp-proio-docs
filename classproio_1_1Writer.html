@@ -96,6 +96,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="writer_8h_source.html">writer.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for proio::Writer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classproio_1_1Writer.png" usemap="#proio::Writer_map" alt=""/>
+  <map id="proio::Writer_map" name="proio::Writer_map">
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -119,7 +127,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classproio_1_1Writer.html">Writer</a> for proio files </p>
 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00044">44</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
+<p>Definition at line <a class="el" href="writer_8h_source.html#l00046">46</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a606d2b2b8c74e9117650d2c4189d15e6"></a>
 <div class="memitem">
@@ -174,7 +182,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Flush compresses and flushes all buffered (bucket) data to the output stream. This is automatically called upon destruction of the <a class="el" href="classproio_1_1Writer.html">Writer</a> object, and when the bucket dump threshold is reached. This function is asynchronous, meaning that it will return before the flush to the output stream is actually complete. Synchronization is forced on destruction. </p>
 
-<p>Definition at line <a class="el" href="writer_8cc_source.html#l00053">53</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
+<p>Definition at line <a class="el" href="writer_8cc_source.html#l00045">45</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
 
 </div>
 </div>
@@ -193,7 +201,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Push takes an <a class="el" href="classproio_1_1Event.html">Event</a> and serializes it into the output bucket. </p>
 
-<p>Definition at line <a class="el" href="writer_8cc_source.html#l00100">100</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
+<p>Definition at line <a class="el" href="writer_8cc_source.html#l00092">92</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
 
 </div>
 </div>
@@ -222,7 +230,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>PushMetadata takes a string key and string data set and pushes it into the stream. If Events exist in the current bucket, the bucket is flushed first. </p>
 
-<p>Definition at line <a class="el" href="writer_8cc_source.html#l00128">128</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
+<p>Definition at line <a class="el" href="writer_8cc_source.html#l00116">116</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
 
 </div>
 </div>
@@ -251,7 +259,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>PushMetadata takes a string key and null-terminated const char array by pointer and pushes it into the stream. If Events exist in the current bucket, the bucket is flushed first. </p>
 
-<p>Definition at line <a class="el" href="writer_8cc_source.html#l00133">133</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
+<p>Definition at line <a class="el" href="writer_8cc_source.html#l00121">121</a> of file <a class="el" href="writer_8cc_source.html">writer.cc</a>.</p>
 
 </div>
 </div>
@@ -278,7 +286,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>SetBucketDumpThreshold sets the threshold uncompressed bucket size for automatic compression and output (dump). I.e., once the size of the uncompressed bucket in memory reaches this threshold, <a class="el" href="classproio_1_1Writer.html#aa66ca9fb97a5439b7d97c1a116da4090">Flush()</a> will be called. <a class="el" href="classproio_1_1Writer.html#aa66ca9fb97a5439b7d97c1a116da4090">Flush()</a> can also be manually called at any time. </p>
 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00084">84</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
+<p>Definition at line <a class="el" href="writer_8h_source.html#l00086">86</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
 
 </div>
 </div>
@@ -305,7 +313,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>SetCompression sets the compression type to use for future output buckets. One of: LZ4, GZIP, or UNCOMPRESSED. </p>
 
-<p>Definition at line <a class="el" href="writer_8h_source.html#l00078">78</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
+<p>Definition at line <a class="el" href="writer_8h_source.html#l00080">80</a> of file <a class="el" href="writer_8h_source.html">writer.h</a>.</p>
 
 </div>
 </div>
