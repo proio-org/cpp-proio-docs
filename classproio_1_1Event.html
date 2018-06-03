@@ -119,6 +119,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab5abcb3172a9610ab9d61d0428018469"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4abc130312b7122525381feb4382168a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Event.html#a4abc130312b7122525381feb4382168a">DeleteTag</a> (std::string tag)</td></tr>
 <tr class="separator:a4abc130312b7122525381feb4382168a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70cbedb7555e195aa3405d7beba9cb84"><td class="memItemLeft" align="right" valign="top">google::protobuf::Message *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Event.html#a70cbedb7555e195aa3405d7beba9cb84">Free</a> (const google::protobuf::Descriptor *desc)</td></tr>
+<tr class="separator:a70cbedb7555e195aa3405d7beba9cb84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27ce4dff76da3e3c0f773eb19b8e23fc"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, <br class="typebreak"/>
 std::shared_ptr&lt; std::string &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Event.html#a27ce4dff76da3e3c0f773eb19b8e23fc">Metadata</a> ()</td></tr>
 <tr class="separator:a27ce4dff76da3e3c0f773eb19b8e23fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -205,7 +207,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Reader</b></td></tr>
 </div><div class="memdoc">
 <p>Clear prepares the <a class="el" href="classproio_1_1Event.html">Event</a> for data from a new event. </p>
 
-<p>Definition at line <a class="el" href="event_8cc_source.html#l00151">151</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
+<p>Definition at line <a class="el" href="event_8cc_source.html#l00161">161</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
 
 </div>
 </div>
@@ -244,6 +246,25 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Reader</b></td></tr>
 <p>EntryTags performs a reverse lookup of tags that point to an entry. This is a relatively expensive search. </p>
 
 <p>Definition at line <a class="el" href="event_8cc_source.html#l00116">116</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a70cbedb7555e195aa3405d7beba9cb84"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Message * Event::Free </td>
+          <td>(</td>
+          <td class="paramtype">const google::protobuf::Descriptor *&#160;</td>
+          <td class="paramname"><em>desc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Free returns an allocated and cleared entry Message of the type described by the given Descriptor, or NULL if no already-allocated messages of this type are available. </p>
+
+<p>Definition at line <a class="el" href="event_8cc_source.html#l00131">131</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
 
 </div>
 </div>
@@ -288,7 +309,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Reader</b></td></tr>
 </div><div class="memdoc">
 <p>Metadata returns a mapping from a string key to a pointer to a string that contains the metadata, by reference. These metadata are all the entries received on the stream up to this <a class="el" href="classproio_1_1Event.html">Event</a>. </p>
 
-<p>Definition at line <a class="el" href="event_8h_source.html#l00056">56</a> of file <a class="el" href="event_8h_source.html">event.h</a>.</p>
+<p>Definition at line <a class="el" href="event_8h_source.html#l00061">61</a> of file <a class="el" href="event_8h_source.html">event.h</a>.</p>
 
 </div>
 </div>
@@ -325,7 +346,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Reader</b></td></tr>
 </div><div class="memdoc">
 <p>String returns a human-readable string representing the event. </p>
 
-<p>Definition at line <a class="el" href="event_8cc_source.html#l00131">131</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
+<p>Definition at line <a class="el" href="event_8cc_source.html#l00141">141</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
 
 </div>
 </div>
