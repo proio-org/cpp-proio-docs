@@ -129,62 +129,64 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classproio_1_1Reader.html">Reader</a>();</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classproio_1_1Event.html">Event</a> *<a class="code" href="classproio_1_1Reader.html#af58d6e7a51441099ff419c6f03d77565">Next</a>(<a class="code" href="classproio_1_1Event.html">Event</a> *recycledEvent = NULL, <span class="keywordtype">bool</span> metadataOnly = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    uint64_t <a class="code" href="classproio_1_1Reader.html#afd1326802327d7f4241188c4eb8a7b4f">Skip</a>(uint64_t nEvents);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classproio_1_1Reader.html#a841aff8caf5ca4436555daad3b24a57b">SeekToStart</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> initBucket();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> readFromBucket(<a class="code" href="classproio_1_1Event.html">Event</a> *event = NULL);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> readHeader();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> readBucket();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    uint64_t syncToMagic(google::protobuf::io::CodedInputStream *stream);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classproio_1_1BucketInputStream.html">BucketInputStream</a> *compBucket;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    google::protobuf::io::FileInputStream *fileStream;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span> fd;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">bool</span> closeFDOnDelete;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    proto::BucketHeader *bucketHeader;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    uint64_t bucketEventsRead;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    uint64_t bucketIndex;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    LZ4F_dctx *dctxPtr;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classproio_1_1BucketInputStream.html">BucketInputStream</a> *bucket;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    std::map&lt;std::string, std::shared_ptr&lt;std::string&gt;&gt; metadata;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classproio_1_1FileOpenError.html">   84</a></span>&#160;<span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="classproio_1_1FileOpenError.html">FileOpenError</a> : <span class="keyword">public</span> std::exception {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *what() <span class="keyword">const</span> <span class="keywordflow">throw</span>() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;Failed to open file for reading&quot;</span>; }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;} fileOpenError;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classproio_1_1DeserializationError.html">   88</a></span>&#160;<span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="classproio_1_1DeserializationError.html">DeserializationError</a> : <span class="keyword">public</span> std::exception {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *what() <span class="keyword">const</span> <span class="keywordflow">throw</span>() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;Failed to deserialize message&quot;</span>; }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;} deserializationError;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classproio_1_1CorruptBucketError.html">   92</a></span>&#160;<span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="classproio_1_1CorruptBucketError.html">CorruptBucketError</a> : <span class="keyword">public</span> std::exception {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *what() <span class="keyword">const</span> <span class="keywordflow">throw</span>() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;Bucket is corrupt&quot;</span>; }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;} corruptBucketError;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classproio_1_1BadLZ4FrameError.html">   96</a></span>&#160;<span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="classproio_1_1BadLZ4FrameError.html">BadLZ4FrameError</a> : <span class="keyword">public</span> std::exception {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *what() <span class="keyword">const</span> <span class="keywordflow">throw</span>() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;Bad LZ4 frame&quot;</span>; }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;} badLZ4FrameError;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classproio_1_1SeekError.html">  100</a></span>&#160;<span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="classproio_1_1SeekError.html">SeekError</a> : <span class="keyword">public</span> std::exception {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *what() <span class="keyword">const</span> <span class="keywordflow">throw</span>() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;Failed to seek file&quot;</span>; }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;} seekError;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}  <span class="comment">// namespace proio</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classproio_1_1Reader.html#af58d6e7a51441099ff419c6f03d77565">Next</a>(std::string *data);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    uint64_t <a class="code" href="classproio_1_1Reader.html#afd1326802327d7f4241188c4eb8a7b4f">Skip</a>(uint64_t nEvents);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classproio_1_1Reader.html#a841aff8caf5ca4436555daad3b24a57b">SeekToStart</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> initBucket();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> readFromBucket(<a class="code" href="classproio_1_1Event.html">Event</a> *event);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> readFromBucket(std::string *data);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> readHeader();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> readBucket();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    uint64_t syncToMagic(google::protobuf::io::CodedInputStream *stream);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classproio_1_1BucketInputStream.html">BucketInputStream</a> *compBucket;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    google::protobuf::io::FileInputStream *fileStream;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">int</span> fd;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">bool</span> closeFDOnDelete;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    proto::BucketHeader *bucketHeader;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    uint64_t bucketEventsRead;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    uint64_t bucketIndex;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    LZ4F_dctx *dctxPtr;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="classproio_1_1BucketInputStream.html">BucketInputStream</a> *bucket;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::map&lt;std::string, std::shared_ptr&lt;std::string&gt;&gt; metadata;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classproio_1_1FileOpenError.html">   89</a></span>&#160;<span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="classproio_1_1FileOpenError.html">FileOpenError</a> : <span class="keyword">public</span> std::exception {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *what() <span class="keyword">const</span> <span class="keywordflow">throw</span>() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;Failed to open file for reading&quot;</span>; }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;} fileOpenError;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classproio_1_1DeserializationError.html">   93</a></span>&#160;<span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="classproio_1_1DeserializationError.html">DeserializationError</a> : <span class="keyword">public</span> std::exception {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *what() <span class="keyword">const</span> <span class="keywordflow">throw</span>() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;Failed to deserialize message&quot;</span>; }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;} deserializationError;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classproio_1_1CorruptBucketError.html">   97</a></span>&#160;<span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="classproio_1_1CorruptBucketError.html">CorruptBucketError</a> : <span class="keyword">public</span> std::exception {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *what() <span class="keyword">const</span> <span class="keywordflow">throw</span>() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;Bucket is corrupt&quot;</span>; }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;} corruptBucketError;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classproio_1_1BadLZ4FrameError.html">  101</a></span>&#160;<span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="classproio_1_1BadLZ4FrameError.html">BadLZ4FrameError</a> : <span class="keyword">public</span> std::exception {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *what() <span class="keyword">const</span> <span class="keywordflow">throw</span>() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;Bad LZ4 frame&quot;</span>; }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;} badLZ4FrameError;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif  // PROIO_READER_H</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classproio_1_1SeekError.html">  105</a></span>&#160;<span class="keyword">const</span> <span class="keyword">class </span><a class="code" href="classproio_1_1SeekError.html">SeekError</a> : <span class="keyword">public</span> std::exception {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *what() <span class="keyword">const</span> <span class="keywordflow">throw</span>() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;Failed to seek file&quot;</span>; }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;} seekError;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}  <span class="comment">// namespace proio</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif  // PROIO_READER_H</span></div>
 <div class="ttc" id="classproio_1_1Reader_html"><div class="ttname"><a href="classproio_1_1Reader.html">proio::Reader</a></div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00038">reader.h:38</a></div></div>
-<div class="ttc" id="classproio_1_1SeekError_html"><div class="ttname"><a href="classproio_1_1SeekError.html">proio::SeekError</a></div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00100">reader.h:100</a></div></div>
-<div class="ttc" id="classproio_1_1FileOpenError_html"><div class="ttname"><a href="classproio_1_1FileOpenError.html">proio::FileOpenError</a></div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00084">reader.h:84</a></div></div>
-<div class="ttc" id="classproio_1_1Reader_html_a841aff8caf5ca4436555daad3b24a57b"><div class="ttname"><a href="classproio_1_1Reader.html#a841aff8caf5ca4436555daad3b24a57b">proio::Reader::SeekToStart</a></div><div class="ttdeci">void SeekToStart()</div><div class="ttdef"><b>Definition:</b> <a href="reader_8cc_source.html#l00080">reader.cc:80</a></div></div>
+<div class="ttc" id="classproio_1_1SeekError_html"><div class="ttname"><a href="classproio_1_1SeekError.html">proio::SeekError</a></div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00105">reader.h:105</a></div></div>
+<div class="ttc" id="classproio_1_1FileOpenError_html"><div class="ttname"><a href="classproio_1_1FileOpenError.html">proio::FileOpenError</a></div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00089">reader.h:89</a></div></div>
+<div class="ttc" id="classproio_1_1Reader_html_a841aff8caf5ca4436555daad3b24a57b"><div class="ttname"><a href="classproio_1_1Reader.html#a841aff8caf5ca4436555daad3b24a57b">proio::Reader::SeekToStart</a></div><div class="ttdeci">void SeekToStart()</div><div class="ttdef"><b>Definition:</b> <a href="reader_8cc_source.html#l00095">reader.cc:95</a></div></div>
 <div class="ttc" id="classproio_1_1BucketInputStream_html"><div class="ttname"><a href="classproio_1_1BucketInputStream.html">proio::BucketInputStream</a></div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00014">reader.h:14</a></div></div>
-<div class="ttc" id="classproio_1_1CorruptBucketError_html"><div class="ttname"><a href="classproio_1_1CorruptBucketError.html">proio::CorruptBucketError</a></div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00092">reader.h:92</a></div></div>
+<div class="ttc" id="classproio_1_1CorruptBucketError_html"><div class="ttname"><a href="classproio_1_1CorruptBucketError.html">proio::CorruptBucketError</a></div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00097">reader.h:97</a></div></div>
 <div class="ttc" id="classproio_1_1Reader_html_a8826662f9b377ea0d2959f623db363f5"><div class="ttname"><a href="classproio_1_1Reader.html#a8826662f9b377ea0d2959f623db363f5">proio::Reader::Reader</a></div><div class="ttdeci">Reader(int fd)</div><div class="ttdef"><b>Definition:</b> <a href="reader_8cc_source.html#l00013">reader.cc:13</a></div></div>
-<div class="ttc" id="classproio_1_1BadLZ4FrameError_html"><div class="ttname"><a href="classproio_1_1BadLZ4FrameError.html">proio::BadLZ4FrameError</a></div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00096">reader.h:96</a></div></div>
+<div class="ttc" id="classproio_1_1BadLZ4FrameError_html"><div class="ttname"><a href="classproio_1_1BadLZ4FrameError.html">proio::BadLZ4FrameError</a></div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00101">reader.h:101</a></div></div>
 <div class="ttc" id="classproio_1_1Reader_html_af58d6e7a51441099ff419c6f03d77565"><div class="ttname"><a href="classproio_1_1Reader.html#af58d6e7a51441099ff419c6f03d77565">proio::Reader::Next</a></div><div class="ttdeci">Event * Next(Event *recycledEvent=NULL, bool metadataOnly=false)</div><div class="ttdef"><b>Definition:</b> <a href="reader_8cc_source.html#l00039">reader.cc:39</a></div></div>
-<div class="ttc" id="classproio_1_1Reader_html_afd1326802327d7f4241188c4eb8a7b4f"><div class="ttname"><a href="classproio_1_1Reader.html#afd1326802327d7f4241188c4eb8a7b4f">proio::Reader::Skip</a></div><div class="ttdeci">uint64_t Skip(uint64_t nEvents)</div><div class="ttdef"><b>Definition:</b> <a href="reader_8cc_source.html#l00060">reader.cc:60</a></div></div>
+<div class="ttc" id="classproio_1_1Reader_html_afd1326802327d7f4241188c4eb8a7b4f"><div class="ttname"><a href="classproio_1_1Reader.html#afd1326802327d7f4241188c4eb8a7b4f">proio::Reader::Skip</a></div><div class="ttdeci">uint64_t Skip(uint64_t nEvents)</div><div class="ttdef"><b>Definition:</b> <a href="reader_8cc_source.html#l00075">reader.cc:75</a></div></div>
 <div class="ttc" id="classproio_1_1Event_html"><div class="ttname"><a href="classproio_1_1Event.html">proio::Event</a></div><div class="ttdef"><b>Definition:</b> <a href="event_8h_source.html#l00011">event.h:11</a></div></div>
-<div class="ttc" id="classproio_1_1DeserializationError_html"><div class="ttname"><a href="classproio_1_1DeserializationError.html">proio::DeserializationError</a></div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00088">reader.h:88</a></div></div>
+<div class="ttc" id="classproio_1_1DeserializationError_html"><div class="ttname"><a href="classproio_1_1DeserializationError.html">proio::DeserializationError</a></div><div class="ttdef"><b>Definition:</b> <a href="reader_8h_source.html#l00093">reader.h:93</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

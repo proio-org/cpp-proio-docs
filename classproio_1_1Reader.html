@@ -112,6 +112,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae1ecb4f76f8ea6348ecff9dcc1bfe0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af58d6e7a51441099ff419c6f03d77565"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classproio_1_1Event.html">Event</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Reader.html#af58d6e7a51441099ff419c6f03d77565">Next</a> (<a class="el" href="classproio_1_1Event.html">Event</a> *recycledEvent=NULL, bool metadataOnly=false)</td></tr>
 <tr class="separator:af58d6e7a51441099ff419c6f03d77565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da8aea30ccd4ebcda49b5abf1fa1185"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Reader.html#a8da8aea30ccd4ebcda49b5abf1fa1185">Next</a> (std::string *data)</td></tr>
+<tr class="separator:a8da8aea30ccd4ebcda49b5abf1fa1185"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd1326802327d7f4241188c4eb8a7b4f"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Reader.html#afd1326802327d7f4241188c4eb8a7b4f">Skip</a> (uint64_t nEvents)</td></tr>
 <tr class="separator:afd1326802327d7f4241188c4eb8a7b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a841aff8caf5ca4436555daad3b24a57b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Reader.html#a841aff8caf5ca4436555daad3b24a57b">SeekToStart</a> ()</td></tr>
@@ -190,6 +192,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a8da8aea30ccd4ebcda49b5abf1fa1185"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Reader::Next </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Next copies the next event data in protobuf wire format into the given string. </p>
+
+<p>Definition at line <a class="el" href="reader_8cc_source.html#l00060">60</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a841aff8caf5ca4436555daad3b24a57b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -204,7 +225,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>SeekToStart sends the reader to the beginning of the stream if it is seekable. </p>
 
-<p>Definition at line <a class="el" href="reader_8cc_source.html#l00080">80</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
+<p>Definition at line <a class="el" href="reader_8cc_source.html#l00095">95</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
 
 </div>
 </div>
@@ -223,7 +244,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Skip skips the next nEvents events. </p>
 
-<p>Definition at line <a class="el" href="reader_8cc_source.html#l00060">60</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
+<p>Definition at line <a class="el" href="reader_8cc_source.html#l00075">75</a> of file <a class="el" href="reader_8cc_source.html">reader.cc</a>.</p>
 
 </div>
 </div>
