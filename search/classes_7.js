@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['seekerror',['SeekError',['../classproio_1_1SeekError.html',1,'proio']]],
-  ['serializationerror',['SerializationError',['../classproio_1_1SerializationError.html',1,'proio']]]
+  ['reader',['Reader',['../classproio_1_1Reader.html',1,'proio']]]
 ];
