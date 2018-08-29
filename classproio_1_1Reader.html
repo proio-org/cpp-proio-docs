@@ -118,6 +118,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afd1326802327d7f4241188c4eb8a7b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a841aff8caf5ca4436555daad3b24a57b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Reader.html#a841aff8caf5ca4436555daad3b24a57b">SeekToStart</a> ()</td></tr>
 <tr class="separator:a841aff8caf5ca4436555daad3b24a57b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7e4eb70b07c2624be3653e734f0b724"><td class="memItemLeft" align="right" valign="top">const <br class="typebreak"/>
+google::protobuf::DescriptorPool *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Reader.html#aa7e4eb70b07c2624be3653e734f0b724">DescriptorPool</a> ()</td></tr>
+<tr class="separator:aa7e4eb70b07c2624be3653e734f0b724"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classproio_1_1Reader.html">Reader</a> for proio files </p>
@@ -163,6 +166,32 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aa7e4eb70b07c2624be3653e734f0b724"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const google::protobuf::DescriptorPool* proio::Reader::DescriptorPool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>DescriptorPool returns a pointer to a protobuf descriptor pool that has been built from information included in the stream or file. This can be passed to Events in order to dynamically read entries of types that are not known at compile time. </p>
+
+<p>Definition at line <a class="el" href="reader_8h_source.html#l00073">73</a> of file <a class="el" href="reader_8h_source.html">reader.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="af58d6e7a51441099ff419c6f03d77565"></a>
 <div class="memitem">
 <div class="memproto">
