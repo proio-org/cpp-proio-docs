@@ -417,7 +417,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordtype">int</span> srcBytesRemaining = srcSize;</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordtype">int</span> dstSize;</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    uint8_t *dstBuffer;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keywordtype">size_t</span> hint;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keywordtype">size_t</span> hint = -1;</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">while</span> (srcBytesRemaining &gt; 0) {</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        Next((<span class="keyword">const</span> <span class="keywordtype">void</span> **)&amp;dstBuffer, &amp;dstSize);</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keywordtype">size_t</span> srcSizeTmp = srcSize;</div>

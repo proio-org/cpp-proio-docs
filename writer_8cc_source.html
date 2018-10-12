@@ -220,7 +220,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    bucketEvents++;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">if</span> (bucket-&gt;ByteCount() &gt; bucketDumpThres) Flush();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">if</span> (uint64_t(bucket-&gt;ByteCount()) &gt; bucketDumpThres) Flush();</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
 <div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classproio_1_1Writer.html#a6cd9af0a00a86c546c5f8d4b0ef5662c">  137</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classproio_1_1Writer.html#a6cd9af0a00a86c546c5f8d4b0ef5662c">Writer::PushMetadata</a>(std::string name, <span class="keyword">const</span> std::string &amp;data) {</div>
@@ -308,11 +308,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    uint64_t bytesWritten = 0;</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">while</span> (stream-&gt;Next((<span class="keywordtype">void</span> **)&amp;data, &amp;size)) {</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        uint64_t bytesLeft = offset - bytesWritten;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        uint64_t bytesToCopy = (bytesLeft &lt; size) ? bytesLeft : size;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        uint64_t bytesToCopy = (bytesLeft &lt; uint64_t(size)) ? bytesLeft : size;</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        std::memcpy(data, Bytes() + bytesWritten, bytesToCopy);</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        bytesLeft -= bytesToCopy;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        bytesWritten += bytesToCopy;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordflow">if</span> (bytesToCopy &lt; size) stream-&gt;BackUp(size - bytesToCopy);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordflow">if</span> (bytesToCopy &lt; uint64_t(size)) stream-&gt;BackUp(size - bytesToCopy);</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordflow">if</span> (bytesLeft == 0) <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    }</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;}</div>
