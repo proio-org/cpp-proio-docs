@@ -139,8 +139,8 @@ std::string &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><
 <tr class="separator:ae39cdc53bffb0741bfda9c5634b7018b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc674fb22935a805c530b323696882db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Event.html#adc674fb22935a805c530b323696882db">SetDescriptorPool</a> (const google::protobuf::DescriptorPool *pool=NULL)</td></tr>
 <tr class="separator:adc674fb22935a805c530b323696882db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a131f136d1855cb7b253bd27bbc7c9586"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Event.html#a131f136d1855cb7b253bd27bbc7c9586">UseGeneratedPool</a> (bool useGenPool=true)</td></tr>
-<tr class="separator:a131f136d1855cb7b253bd27bbc7c9586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb601c820bc1e5fd084ea68880626492"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classproio_1_1Event.html#afb601c820bc1e5fd084ea68880626492">UseGeneratedPool</a> (bool useGenPool=true)</td></tr>
+<tr class="separator:afb601c820bc1e5fd084ea68880626492"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af37245d358792cdef34ff4c76c74c022"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af37245d358792cdef34ff4c76c74c022"></a>
 <a class="el" href="classproio_1_1Event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classproio_1_1Event.html">Event</a> &amp;event)</td></tr>
 <tr class="separator:af37245d358792cdef34ff4c76c74c022"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -561,30 +561,22 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Reader</b></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a131f136d1855cb7b253bd27bbc7c9586"></a>
+<a class="anchor" id="afb601c820bc1e5fd084ea68880626492"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void proio::Event::UseGeneratedPool </td>
+          <td class="memname">void Event::UseGeneratedPool </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>useGenPool</em> = <code>true</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>UseGeneratedPool can be used to disable this <a class="el" href="classproio_1_1Event.html">Event</a>'s use of the protobuf generated pool. By default, the event will first try to use the protobuf generated pool when GetEntry is called. If this method is called with an argument of false, GetEntry will always attempt to create dynamic protobuf Messages from a pool either set by a <a class="el" href="classproio_1_1Reader.html">Reader</a> or by SetDescriptorPool. This is for testing purposes and can also to be used to gain access to new data model fields. </p>
 
-<p>Definition at line <a class="el" href="event_8h_source.html#l00108">108</a> of file <a class="el" href="event_8h_source.html">event.h</a>.</p>
+<p>Definition at line <a class="el" href="event_8cc_source.html#l00212">212</a> of file <a class="el" href="event_8cc_source.html">event.cc</a>.</p>
 
 </div>
 </div>
